@@ -3,68 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola Proehrf | Reserva-PR</title>
+    <title>Portal Escolar | Estrutura Profissional</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">Proehrf<span>Reserva</span></h1>
-            <nav>
+    <div class="grid-container">
+        <header class="header">
+            <div class="logo-box">
+                <img src="logo.png" alt="Logo Escola" class="logo-img">
+            </div>
+            <nav class="menu-box">
                 <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Calendário</a></li>
+                    <li><a href="#" class="login-trigger" onclick="abrirModal()">Área do Aluno (Login)</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Educação que transforma o futuro.</h2>
-            <p>Conheça a Proehrf em Reserva-PR e prepare-se para o mercado de trabalho com excelência.</p>
-            <a href="#" class="btn-primary">Saiba Mais</a>
-        </div>
-    </section>
+        <main class="main-content">
+            <section class="banner-escola">
+                <img src="foto-escola.jpg" alt="Foto da Escola" class="escola-img-main">
+                <h1>Bem-vindo à nossa Instituição</h1>
+            </section>
 
-    <main class="content container">
-        <section class="features">
-            <div class="card">
-                <h3>Infraestrutura</h3>
-                <p>Salas modernas e equipadas para o melhor aprendizado.</p>
-            </div>
-            <div class="card">
-                <h3>Corpo Docente</h3>
-                <p>Professores qualificados e atuantes no mercado.</p>
-            </div>
-            <div class="card">
-                <h3>Localização</h3>
-                <p>Situada no coração de Reserva, Paraná.</p>
-            </div>
-        </section>
-    </main>
+            <section class="texto-escola">
+                <h2>Nossa História e Missão</h2>
+                <p>Nossa instituição é referência em ensino de qualidade há mais de 20 anos. Com uma metodologia focada no desenvolvimento integral do aluno, unimos tecnologia de ponta com valores humanos fundamentais. Nossa infraestrutura conta com laboratórios modernos, bibliotecas completas e espaços de convivência que estimulam a criatividade.</p>
+                <p>Aqui, acreditamos que cada estudante possui um talento único. Nossa missão é prover as ferramentas necessárias para que eles alcancem seus sonhos e se tornem cidadãos conscientes e preparados para o mercado global.</p>
+            </section>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-about">
-                <h4>Proehrf Reserva</h4>
-                <p>Excelência em ensino e compromisso com o aluno.</p>
-            </div>
-            <div class="footer-contact">
-                <h4>Contato</h4>
-                <p>📍 Reserva - PR</p>
-                <p>📞 (42) 0000-0000</p>
-                <p>📧 contato@proehrf.com.br</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Escola Proehrf. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+            <section class="calendario-section">
+                <h2>Calendário Acadêmico Completo</h2>
+                <table class="tabela-eventos">
+                    <thead>
+                        <tr>
+                            <th>Mês</th>
+                            <th>Evento</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Maio</td><td>Semana de Provas</td><td>15 a 22</td></tr>
+                        <tr><td>Junho</td><td>Festa Cultural</td><td>10</td></tr>
+                        <tr><td>Julho</td><td>Recesso Escolar</td><td>01 a 31</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
 
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Alunos de Destaque</h3>
+                <div class="aluno-item">
+                    <div class="avatar"></div>
+                    <p><strong>Ana Clara</strong> - Nota 10 em Robótica</p>
+                </div>
+                <div class="aluno-item">
+                    <div class="avatar"></div>
+                    <p><strong>João Pedro</strong> - Campeão de Xadrez</p>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3>Pesquisa Rápida</h3>
+                <div class="search-box">
+                    <input type="text" id="botInput" placeholder="Pergunte ao Bot...">
+                    <button onclick="falarComBot()">Perguntar</button>
+                </div>
+                <div id="botResponse" class="bot-bubble">Olá! Digite algo para eu te ajudar.</div>
+            </div>
+        </aside>
+
+        <footer class="footer">
+            <p>&copy; 2024 Escola de Excelência - Todos os direitos reservados.</p>
+            <div class="redes-sociais">Instagram | Facebook | LinkedIn</div>
+        </footer>
+    </div>
+
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Acesso Restrito</h2>
+            <form id="formLogin">
+                <input type="text" placeholder="Matrícula" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar na Conta</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
