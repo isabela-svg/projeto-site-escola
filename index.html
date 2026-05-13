@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Escolar | Estrutura Profissional</title>
+    <title>Portal Acadêmico | Inovação e Tradição</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,79 +19,86 @@
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Calendário</a></li>
-                    <li><a href="#" class="login-trigger" onclick="abrirModal()">Área do Aluno (Login)</a></li>
+                    <li class="login-wrapper"><a href="#" class="login-trigger" onclick="abrirModal()">Portal do Aluno</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="main-content">
-            <section class="banner-escola">
-                <img src="foto-escola.jpg" alt="Foto da Escola" class="escola-img-main">
-                <h1>Bem-vindo à nossa Instituição</h1>
+            <section class="hero-image-container">
+                <img src="foto-escola.jpg" alt="Fachada da Escola" class="escola-img-main">
+                <div class="hero-overlay">
+                    <h1 class="titulo-decorado">Educar é Transformar</h1>
+                </div>
             </section>
 
             <section class="texto-escola">
-                <h2>Nossa História e Missão</h2>
-                <p>Nossa instituição é referência em ensino de qualidade há mais de 20 anos. Com uma metodologia focada no desenvolvimento integral do aluno, unimos tecnologia de ponta com valores humanos fundamentais. Nossa infraestrutura conta com laboratórios modernos, bibliotecas completas e espaços de convivência que estimulam a criatividade.</p>
-                <p>Aqui, acreditamos que cada estudante possui um talento único. Nossa missão é prover as ferramentas necessárias para que eles alcancem seus sonhos e se tornem cidadãos conscientes e preparados para o mercado global.</p>
+                <h2 class="subtitulo-moderno">Nossa Instituição</h2>
+                <p>Nossa escola nasceu de um sonho: criar um ambiente onde a *excelência acadêmica* se encontra com a criatividade humana. Com décadas de história, evoluímos para nos tornar um polo tecnológico e humanista, preparando nossos jovens para os desafios de um mundo em constante mudança.</p>
+                <p>Oferecemos um currículo bilíngue, laboratórios de última geração e uma metodologia ativa que coloca o aluno no centro do aprendizado. Aqui, cada detalhe é pensado para inspirar o conhecimento.</p>
             </section>
 
             <section class="calendario-section">
-                <h2>Calendário Acadêmico Completo</h2>
-                <table class="tabela-eventos">
-                    <thead>
-                        <tr>
-                            <th>Mês</th>
-                            <th>Evento</th>
-                            <th>Data</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Maio</td><td>Semana de Provas</td><td>15 a 22</td></tr>
-                        <tr><td>Junho</td><td>Festa Cultural</td><td>10</td></tr>
-                        <tr><td>Julho</td><td>Recesso Escolar</td><td>01 a 31</td></tr>
-                    </tbody>
-                </table>
+                <h2 class="subtitulo-moderno">Cronograma Acadêmico</h2>
+                <div class="table-container">
+                    <table class="tabela-eventos">
+                        <thead>
+                            <tr>
+                                <th>Mês</th>
+                                <th>Evento Especial</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Maio</td><td>Olimpíada de Conhecimento</td><td>15/05</td></tr>
+                            <tr><td>Junho</td><td>Arraial Tecnológico</td><td>22/06</td></tr>
+                            <tr><td>Julho</td><td>Fórum de Inovação</td><td>05/07</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </main>
 
         <aside class="sidebar">
-            <div class="widget">
-                <h3>Alunos de Destaque</h3>
+            <div class="widget card-degrade">
+                <h3>Alunos Destaque</h3>
                 <div class="aluno-item">
-                    <div class="avatar"></div>
-                    <p><strong>Ana Clara</strong> - Nota 10 em Robótica</p>
+                    <div class="avatar-glow"></div>
+                    <p><strong>Beatriz Lima</strong><br><span>Primeiro lugar em Bioquímica</span></p>
                 </div>
                 <div class="aluno-item">
-                    <div class="avatar"></div>
-                    <p><strong>João Pedro</strong> - Campeão de Xadrez</p>
+                    <div class="avatar-glow"></div>
+                    <p><strong>Marcos Vinícius</strong><br><span>Capitão do Time de Robótica</span></p>
                 </div>
             </div>
 
-            <div class="widget">
-                <h3>Pesquisa Rápida</h3>
+            <div class="widget bot-area">
+                <h3>Suporte IA</h3>
+                <div id="botResponse" class="bot-bubble">Como posso ajudar na sua pesquisa hoje?</div>
                 <div class="search-box">
-                    <input type="text" id="botInput" placeholder="Pergunte ao Bot...">
+                    <input type="text" id="botInput" placeholder="Sua pergunta...">
                     <button onclick="falarComBot()">Perguntar</button>
                 </div>
-                <div id="botResponse" class="bot-bubble">Olá! Digite algo para eu te ajudar.</div>
             </div>
         </aside>
 
         <footer class="footer">
-            <p>&copy; 2024 Escola de Excelência - Todos os direitos reservados.</p>
-            <div class="redes-sociais">Instagram | Facebook | LinkedIn</div>
+            <p>&copy; 2024 Colégio Royal Premium. Onde o futuro começa agora.</p>
         </footer>
     </div>
 
     <div id="modalLogin" class="modal">
-        <div class="modal-content">
+        <div class="modal-content-premium">
             <span class="close" onclick="fecharModal()">&times;</span>
-            <h2>Acesso Restrito</h2>
+            <h2 class="titulo-decorado">Bem-vindo de volta!</h2>
             <form id="formLogin">
-                <input type="text" placeholder="Matrícula" required>
-                <input type="password" placeholder="Senha" required>
-                <button type="submit">Entrar na Conta</button>
+                <div class="input-group">
+                    <input type="text" placeholder="Usuário/RA" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn-login-gradient">Acessar Painel</button>
             </form>
         </div>
     </div>
